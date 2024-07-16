@@ -1,1 +1,61 @@
-{}
+{
+  "items": [
+    {
+      "id": "7613",
+      "name": "Feijão",
+      "price": 7.99
+    },
+    {
+      "id": "73c6",
+      "name": "Arroz",
+      "price": 7.99
+    },
+    {
+      "id": "4f87",
+      "name": "Macarrão",
+      "price": 3.49
+    },
+    {
+      "id": "9a12",
+      "name": "Azeite de Oliva",
+      "price": 12.99
+    },
+    {
+      "id": "2b34",
+      "name": "Leite",
+      "price": 4.29
+    },
+    {
+      "id": "f5e2",
+      "name": "Café",
+      "price": 9.99
+    },
+    {
+      "id": "8d76",
+      "name": "Chocolate",
+      "price": 5.79
+    },
+    {
+      "id": "1e09",
+      "name": "Queijo",
+      "price": 8.49
+    },
+    {
+      "id": "5c92",
+      "name": "Ovos",
+      "price": 6.99
+    },
+    {
+      "id": "7a3f",
+      "name": "Pão",
+      "price": 2.49
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "pedro",
+      "password": "pedro"
+    }
+  ]
+}

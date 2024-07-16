@@ -1,0 +1,6 @@
+.card {
+    margin: auto; /* Centraliza o card horizontalmente */
+    max-width: 600px; /* Define a largura máxima do card */
+    min-width: 300px; /* Define a largura mínima do card */
+  }
+  

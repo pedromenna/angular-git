@@ -1,0 +1,22 @@
+<div class="container-fluid d-flex align-items-center" style="height: 100vh;">
+  <div class="row justify-content-center w-100">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2>Add New Item</h2>
+          <form (ngSubmit)="addItem()">
+            <div class="mb-3">
+              <label class="form-label">Name:</label>
+              <input class="form-control" [(ngModel)]="item.name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Price:</label>
+              <input class="form-control" [(ngModel)]="item.price" name="price" type="number" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Add Item</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

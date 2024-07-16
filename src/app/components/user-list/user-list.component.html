@@ -1,0 +1,11 @@
+<div>
+    <input type="text" [(ngModel)]="searchText" placeholder="Search users">
+    <ul>
+      <li *ngFor="let user of users | filter:searchText">
+        {{ user.username }}
+        <button (click)="deleteUser(user.id)">Delete</button>
+        <a [routerLink]="['/users', user.id]">Details</a>
+      </li>
+    </ul>
+  </div>
+  

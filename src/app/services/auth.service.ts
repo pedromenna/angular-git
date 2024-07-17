@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
@@ -13,10 +13,14 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login(username: string, password: string): Observable<boolean> {
+    if (!username || !password) {
+      return of(false); // Retorna falso se usuário ou senha não forem fornecidos
+    }
+
     return this.http.get<any[]>(`${this.apiUrl}?username=${username}&password=${password}`)
       .pipe(
         map(users => {
-          if (users.length) {
+          if (users.length > 0) { // Verifica se a consulta retornou algum usuário
             localStorage.setItem('user', JSON.stringify(users[0]));
             return true;
           } else {

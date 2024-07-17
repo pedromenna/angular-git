@@ -49,6 +49,11 @@
       "id": "7a3f",
       "name": "Pão",
       "price": 2.49
+    },
+    {
+      "id": "115f",
+      "name": "Batata",
+      "price": 2.89
     }
   ],
   "users": [

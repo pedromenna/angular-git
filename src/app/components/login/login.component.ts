@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router'; // Adicionado
 import { AuthService } from '../../services/auth.service';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule] // Adicionado
+  imports: [FormsModule, CommonModule, RouterModule]
 })
 export class LoginComponent {
   username: string = '';
@@ -18,12 +18,16 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   login(): void {
-    this.authService.login(this.username, this.password).subscribe(success => {
-      if (success) {
-        this.router.navigate(['/items']);
-      } else {
-        alert('Login failed');
-      }
-    });
+    if (this.username && this.password) { // Certifique-se que os campos não estão vazios
+      this.authService.login(this.username, this.password).subscribe(success => {
+        if (success) {
+          this.router.navigate(['/items']);
+        } else {
+          alert('Login failed: Incorrect username or password');
+        }
+      });
+    } else {
+      alert('Please fill in both username and password.');
+    }
   }
 }

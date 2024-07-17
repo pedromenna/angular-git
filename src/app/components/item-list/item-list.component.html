@@ -3,15 +3,15 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Items</h2>
-          <input type="text" class="form-control mb-3" [(ngModel)]="searchText" placeholder="Search items">
+          <h2 class="card-title">Produtos</h2>
+          <input type="text" class="form-control mb-3" [(ngModel)]="searchText" placeholder="Pesquisa">
           <ul class="list-group">
             <li class="list-group-item" *ngFor="let item of items | filter:searchText">
               {{ item.name }} - {{ item.price | currency:'BRL':'symbol':'1.2-2' }}
-              <button class="btn btn-danger btn-sm float-end" (click)="deleteItem(item.id)">Delete</button>
+              <button class="btn btn-danger btn-sm float-end" (click)="deleteItem(item.id)">Deletar</button>
             </li>
           </ul>
-          <a class="btn btn-primary mt-3" routerLink="/items/new">Add New Item</a>
+          <a class="btn btn-primary mt-3" routerLink="/items/new">Adicionar Produto</a>
         </div>
       </div>
     </div>

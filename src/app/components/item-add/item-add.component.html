@@ -3,17 +3,17 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
-          <h2>Add New Item</h2>
+          <h2>Adicionar Novo Produto</h2>
           <form (ngSubmit)="addItem()">
             <div class="mb-3">
-              <label class="form-label">Name:</label>
+              <label class="form-label">Nome:</label>
               <input class="form-control" [(ngModel)]="item.name" name="name" required>
             </div>
             <div class="mb-3">
-              <label class="form-label">Price:</label>
+              <label class="form-label">Preço:</label>
               <input class="form-control" [(ngModel)]="item.price" name="price" type="number" required>
             </div>
-            <button class="btn btn-primary" type="submit">Add Item</button>
+            <button class="btn btn-primary" type="submit">Adicionar</button>
           </form>
         </div>
       </div>

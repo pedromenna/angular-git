@@ -6,8 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
-import { ItemDetailComponent } from './components/item-detail/item-detail.component';
-import { UserListComponent } from './components/user-list/user-list.component';
 import { ItemAddComponent } from './components/item-add/item-add.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
@@ -16,8 +14,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     AppComponent,
     LoginComponent,
     ItemListComponent,
-    ItemDetailComponent,
-    UserListComponent,
     ItemAddComponent,
     FilterPipe
   ],

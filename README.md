@@ -1,8 +1,8 @@
-# MyApp
+#PROJETO ANGULAR FRAMEWORK II 
+
+### RODAR O "BANCO DE DADOS"
+`json-server --watch db.json`
 
 
-
-
-### json-server --watch db.json
-
-### ng serve
+### RODAR A APLICAÇÃO
+`ng serve`
